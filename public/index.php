@@ -14,6 +14,9 @@ require_once __DIR__ . '/../app/Core/Autoloader.php';
 require_once __DIR__ . '/../app/Core/Env.php';
 Env::load(__DIR__ . '/../.env');
 
+$appConfig = require __DIR__ . '/../config/app.php';
+define('BASE_URL', $appConfig['base_url']);
+
 // Start session
 session_start();
 
